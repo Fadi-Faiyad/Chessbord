@@ -93,6 +93,63 @@ item.addEventListener('click', function (){
 
 
   function whosTurn(toggle) {
+    if (item.innerText == `${toggle}pawn`){
+        item.style.backgroundColor == 'pink'
+        if (tog % 2 !== 0 && aup < 800){
+            
+            if (document.getElementById(`b${a + 100}`).innerText == 0){
+                document.getElementById(`b${a + 100}`).style.backgroundColor == 'green'
+            }
+            if (aside < 8 && document.getElementById(`b${a + 100 + 1}`).innerText !==0){
+                document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
+
+            }
+            if (aside > 1 && document.getElementById(`b${a + 100 - 1}`).innerText !==0){
+                document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
+            }
+
+        }
+        if (tog % 2 == 0 && aup > 100){
+            if (document.getElementById(`b${a - 100}`).innerText == 0){
+                document.getElementById(`b${a - 100}`).style.backgroundColor == 'green'
+            }
+            if (aside < 8 && document.getElementById(`b${a + 100 + 1}`).innerText !==0){
+                document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
+
+            }
+            if (aside > 1 && document.getElementById(`b${a + 100 - 1}`).innerText !==0){
+                document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
+            }
+        }
+    }
+    if (item.innerText == `${toggle}king`){
+        if(aside < 8) {
+            document.getElementById(`b${a + 1}`).style.backgroundColor = 'green'
+        }
+        if (aside > 1) {
+            document.getElementById(`b${a - 1}`).style.backgroundColor = 'green'
+        }
+        if (aup < 800){
+            document.getElementById(`b${a + 100}`).style.backgroundColor = 'green'
+        }
+        if (aup > 100){
+            document.getElementById(`b${a - 100}`).style.backgroundColor = 'green'
+        }
+        if (aup > 100 && aside < 8){
+            document.getElementById(`b${a - 100 + 1}`).style.backgroundColor = 'green'
+        }
+        if (aup > 100 && aside > 1){
+            document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'green'
+
+        }
+        if (aup < 800 && aside < 8){
+            document.getElementById(`b${a + 100 + 1}`).style.backgroundColor = 'green'
+        }
+        if (aup < 800 && aside > 1){
+            document.getElementById(`b${a + 100 - 1}`).style.backgroundColor = 'green'
+        }
+        item.style.backgroundColor = 'pink'
+    }
     
   }
    
